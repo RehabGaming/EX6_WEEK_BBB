@@ -1,28 +1,48 @@
-# Unity week 5: Two-dimensional scene-building and path-finding
+### README: **משחק ניווט מבוסס אריחים**
 
-A project with step-by-step scenes illustrating how to construct a 2D scene using tilemaps,
-and how to do path-finding using the BFS algorithm.
+---
 
-Text explanations are available 
-[here](https://github.com/gamedev-at-ariel/gamedev-5782) in folder 07.
+## **תיאור המשחק**
 
-## Cloning
-To clone the project, you may need to install git lfs first:
+המשחק הוא משחק ניווט מבוסס אריחים שבו השחקן שולט בדמות שנעה על רשת אריחים (Tilemap) כדי להגיע למיקום יעד שנקבע מראש ע"י לחיצה בעזרת העכבר על המיקום או לחלופין תזוזה דינמית בעזרת חצי המקלדת. המשחק כולל לוגיקת חישוב מסלול מתקדמת, מגבלות תנועה ריאליסטיות, ומערכת דינמית של הסתרת אריחים לשיפור החוויה והאתגר.
 
-    git lfs install 
+---
+
+## **מטרת המשחק**
+- המטרה המרכזית במשחק היא לטייל עם הדמות של השחקן מנקודת ההתחלה על מפת האריחים, תוך התגברות על מכשולים (כמו הרים).
+
+---
+
+## **איך לשחק**
+
+1. **קביעת יעד:**
+   - בוחרים עם העכבר מקום אליו רוצים להגיע במפה או לחלופין זזים במפה בעזרת החצים במקלדת.
+
+2. **נווטו במפה:**
+   - הדמות תחשב אוטומטית את המסלול הקצר ביותר ותתחיל לנוע.
+
+3. **שימו לב למכשולים:**
+   - אריחים בלתי עבירים (כמו הרים) יחסמו את הדרך, ויידרש למצוא מסלול חלופי.
+
+4. **גלו אזורים מוסתרים:**
+   - תצוגת המפה תושפע ממיקום השחקן ביחס להרים.
+
+---
+
+## **היבטים טכניים**
+
+### **מבוסס על מפת האריחים של יוניטי**
+- מנצל את מערכת האריחים של Unity ליצירת מפה יעילה ומדויקת.
+
+### **חישוב מסלול חכם**
+- האלגוריתם BFS מבטיח ניווט מהיר ויעיל גם במפות מורכבות.
+
+### **הסתרת אריחים**
+- אריחים מוסתרים בהתבסס על מיקום השחקן והפרספקטיבה.
+
+### **אפשרויות התאמה אישית**
+- התאמה של מהירות התנועה, מגבלות האריחים, והאלגוריתם.
+
+---
 
 
-## Credits
-
-Graphics:
-* [Ultima 4 Graphics](https://github.com/jahshuwaa/u4graphics) by Joshua Steele.
-
-Online course:
-* [Unity 2D](https://www.udemy.com/course/unitycourse/learn/lecture/10246496), a Udemy course by Gamedev.tv.
-* [Unity RPG](https://www.gamedev.tv/p/unity-rpg/?product_id=1503859&coupon_code=JOINUS).
-
-Procedural generation:
-* [Habrador - Unity Programming Patterns](https://github.com/Habrador/Unity-Programming-Patterns#7-double-buffer)
-
-Programming:
-* Erel Segal-Halevi
